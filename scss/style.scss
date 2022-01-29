@@ -33,13 +33,13 @@ h2 {
 
 li {
 	font-family: 'Poppins', sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 	color: #1A2805;
 }
 
 p {
 	font-family: 'Poppins', sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 	color: #08150A;
 }
 
@@ -83,13 +83,13 @@ p {
 }
 
 .btn {
-	width: 183px;
-	height: 55px;
+	width: 170px;
+	height: 45px;
 	background: #1DC22E;
-	color: #fff;
-	padding: 20px 29px 20px 29px;
+	color: rgba(255, 255, 255, 0.9);
+	padding: 15px 25px 15px 25px;
 	text-align: center;
-	font-size: 18px;
+	font-size: 16px;
 	border-radius: 6px;
 }
 
@@ -114,12 +114,12 @@ main {
 }
 .container-header {
 	height: 100vh;
-	max-width: 1139px;
+	max-width: 993px;
 	margin: 0 auto;
 }
 
 .container {
-	max-width: 1139px;
+	max-width: 993px;
 	margin: 0 auto;
 }
 
@@ -177,6 +177,10 @@ main {
 	transition: all .2s ease;
 }
 
+.header__menu-item a {
+	color: rgba(26, 40, 5, 0.6);
+}
+
 .header__menu-item {
 	padding-left: 27px;
 	&:hover {
@@ -221,16 +225,16 @@ main {
 
 }
 .header__flex_wrapper-item {
-	max-width: 555px;
+	max-width: 487px;
 }
 .header__flex_wrapper-title {
-	margin-left: 10px;
+	transform: scale(0.8);
+	margin-left: -48px;
 }
 .header__flex_wrapper-text {
-	margin: 15px 10px 63px 10px;
+	margin: 15px 10px 63px 0px;
 }
 .header__flex_wrapper-btn {
-	margin-left: 10px;
 }
 
 .header__flex_wrapper-btn:hover {
@@ -242,23 +246,25 @@ main {
 .header__flex_wrapper-img {
 	position: relative;
 	z-index: 1;
+	left: 100px;
 }
 .header__flex_wrapper--img {
-	max-width: 140%;
+	max-width: 85%;
     max-height: 100%;
-    margin-top: -125px;
+    margin-top: 10px;
     z-index: 2;    
 }
 
 .header__flex_wrapper-img::before {
 	content: " ";
 	position: absolute;
-	bottom: -281px;
-   	left: 73px;
+	bottom: -150px;
+   	left: -160px;
 	background: url('../img/tomato.png') no-repeat;
 	width: 100%;
 	height: 100%;
 	z-index: -1;
+	transform: scale(0.8);
 }
 
 /************************************************************************************************************************************************************************************
@@ -266,16 +272,14 @@ main {
 ********************************************************/
 
 /* Large desktops and laptops */
-@media (min-width: 1200px) {
-
+@media (min-width: 1367px) {
+	.container-header {
+		max-width: 993px;
+	}
 }
 
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
-	.container-header {
-		max-width: 993px;
-	}
-
 	.header__flex_wrapper--img {
     	max-width: 120%;;
     	margin-top: -55px;
@@ -465,8 +469,10 @@ main {
 
 
 /* Large desktops and laptops */
-@media (min-width: 1200px) {
-
+@media (min-width: 1367px) {
+	.container {
+		max-width: 1139px;
+	}
 }
 
 /* Landscape tablets and medium desktops */
