@@ -1,0 +1,1167 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+a {
+  color: #000; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0; }
+
+/*--------------------*/
+/*font-family: 'Asap', sans-serif;
+font-family: 'Poppins', sans-serif;*/
+body {
+  font-family: 'Poppins', sans-serif; }
+
+body._lock {
+  overflow: hidden; }
+
+h1 {
+  font-family: 'Asap', sans-serif;
+  font-size: 51px;
+  color: #191700; }
+
+h2 {
+  font-family: 'Asap', sans-serif;
+  font-size: 51px;
+  color: #191700; }
+
+li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  color: #1A2805; }
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  color: #08150A; }
+
+.price {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #08150A; }
+
+.plus {
+  height: 30px;
+  width: 30px;
+  background-color: #000;
+  position: relative;
+  border-radius: 50px;
+  display: inline-block;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.plus::before {
+  content: " ";
+  position: absolute;
+  top: 14px;
+  right: 8px;
+  width: 30px;
+  height: 4px;
+  color: #fff;
+  background: url(../img/vector/gorizont.png) 100% 100%/contain no-repeat; }
+
+.plus::after {
+  content: " ";
+  position: absolute;
+  top: 9px;
+  left: -5px;
+  width: 21px;
+  height: 13px;
+  color: #fff;
+  background: url(../img/vector/vertical.png) 100% 100%/contain no-repeat; }
+
+.btn {
+  width: 183px;
+  height: 55px;
+  background: #1DC22E;
+  color: #fff;
+  padding: 20px 29px 20px 29px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 6px; }
+
+.btn:hover {
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  background: #218a2c; }
+
+main {
+  overflow: hidden; }
+
+/************************************************************************************************************************************************************************************
+************ПЕРВЫЙ БЛОК ХЕДЕР***************************
+********************************************************/
+.header {
+  height: 100vh;
+  background: url("../img/wrapper.png") 100% 100%/cover no-repeat;
+  overflow: hidden; }
+
+.container-header {
+  height: 100vh;
+  max-width: 1139px;
+  margin: 0 auto; }
+
+.container {
+  max-width: 1139px;
+  margin: 0 auto; }
+
+.header__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 123px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.header__flex-logo {
+  display: inline-block;
+  position: relative; }
+
+.header__flex-logo::before {
+  content: " ";
+  position: absolute;
+  top: -1px;
+  left: 16px;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  background: url("../img/logo.png") no-repeat; }
+
+.header__flex-logo::after {
+  content: " ";
+  position: absolute;
+  top: -1px;
+  right: 16px;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  background: url("../img/logo.png") no-repeat; }
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 660px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 2; }
+
+.header__menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 400px; }
+
+.header__menu-item {
+  position: relative;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease; }
+
+.header__menu-item {
+  padding-left: 27px; }
+  .header__menu-item:hover {
+    font-weight: 900; }
+  .header__menu-item:focus {
+    font-weight: 900; }
+  .header__menu-item:active {
+    font-weight: 900; }
+
+.header__menu-item::before {
+  content: " ";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  opacity: 0;
+  background: url("../img/vector/group.png") no-repeat; }
+
+.header__menu-item:hover:before {
+  opacity: 1;
+  -webkit-transform: rotate 20deg;
+  -ms-transform: rotate 20deg;
+  transform: rotate 20deg;
+  -webkit-transform: translate(0, 0) rotate(60deg);
+  -ms-transform: translate(0, 0) rotate(60deg);
+  transform: translate(0, 0) rotate(60deg); }
+
+.header__flex-wrapper {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.header__flex_wrapper-item {
+  max-width: 555px; }
+
+.header__flex_wrapper-title {
+  margin-left: 10px; }
+
+.header__flex_wrapper-text {
+  margin: 15px 10px 63px 10px; }
+
+.header__flex_wrapper-btn {
+  margin-left: 10px; }
+
+.header__flex_wrapper-btn:hover {
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  background: #218a2c; }
+
+.header__flex_wrapper-img {
+  position: relative;
+  z-index: 1; }
+
+.header__flex_wrapper--img {
+  max-width: 140%;
+  max-height: 100%;
+  margin-top: -125px;
+  z-index: 2; }
+
+.header__flex_wrapper-img::before {
+  content: " ";
+  position: absolute;
+  bottom: -281px;
+  left: 73px;
+  background: url("../img/tomato.png") no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ ПЕРВЫЙ БЛОК ХЕДЕР***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container-header {
+    max-width: 993px; }
+  .header__flex_wrapper--img {
+    max-width: 120%;
+    margin-top: -55px; }
+  .header__flex_wrapper-img::before {
+    bottom: -132px;
+    left: 4px; } }
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container-header {
+    max-width: 769px; }
+  .header__flex_wrapper-title {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    margin-left: -37px; }
+  .header__flex_wrapper--img {
+    max-width: 150%;
+    margin-top: -66px; }
+  .header__flex_wrapper-img::before {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    bottom: -113px;
+    left: 4px; } }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  /*******БУРГЕР***********************************/
+  .header__menu-list {
+    display: block;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .header-flex {
+    position: static; }
+  .menu__icon {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer; }
+  .menu__icon span,
+  .menu__icon::before,
+  .menu__icon::after {
+    left: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background-color: #000;
+    display: block; }
+  .menu__icon::before,
+  .menu__icon::after {
+    content: " "; }
+  .menu__icon::before {
+    top: 0; }
+  .menu__icon::after {
+    bottom: 0; }
+  .menu__icon span {
+    top: 50%;
+    -webkit-transform: scale(1) translate(0px, -50%);
+    -ms-transform: scale(1) translate(0px, -50%);
+    transform: scale(1) translate(0px, -50%); }
+  .menu__icon._active span {
+    -webkit-transform: scale(0) translate(0px, -50%);
+    -ms-transform: scale(0) translate(0px, -50%);
+    transform: scale(0) translate(0px, -50%); }
+  .menu__icon._active::before {
+    top: 50%;
+    -webkit-transform: rotate(-45deg) translate(0px, -50%);
+    -ms-transform: rotate(-45deg) translate(0px, -50%);
+    transform: rotate(-45deg) translate(0px, -50%); }
+  .menu__icon._active::after {
+    bottom: 50%;
+    -webkit-transform: rotate(45deg) translate(0px, 50%);
+    -ms-transform: rotate(45deg) translate(0px, 50%);
+    transform: rotate(45deg) translate(0px, 50%); }
+  .header__menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 100px 30px 30px 30px;
+    -webkit-transition: left 0.3s ease 0s;
+    -o-transition: left 0.3s ease 0s;
+    transition: left 0.3s ease 0s;
+    overflow: auto;
+    z-index: 4;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  .header__menu._active {
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .header__menu-item {
+    margin: 0 0 30px 0; }
+  .header-menu__link {
+    font-size: 24px; }
+  .container-header {
+    max-width: 481px; }
+  .header__flex-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .header__flex_wrapper-title {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    margin-left: -37px; }
+  .header__flex_wrapper--img {
+    max-width: 130%;
+    margin-top: -66px;
+    margin-left: -78px; }
+  .header__flex_wrapper-img::before {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    bottom: -113px;
+    left: -88px; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 34px; }
+  .container-header {
+    max-width: 321px; }
+  .header__flex_wrapper--img {
+    max-width: 116%;
+    margin-top: -37px;
+    margin-left: -10px; }
+  .header__flex_wrapper-title {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    margin-left: -74px; }
+  .header__flex_wrapper-img::before {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    bottom: -65px;
+    left: -70px; }
+  .header__flex_wrapper-item {
+    max-width: 320px; } }
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+  .container-header {
+    max-width: 280px; }
+  .header__flex_wrapper-title {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    margin-left: -74px; }
+  .header__flex_wrapper-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .header__flex_wrapper-title {
+    margin-left: 0; }
+  .header__flex_wrapper-text {
+    margin: 15px 20px 63px 20px; } }
+
+/************************************************************************************************************************************************************************************
+************ВТОРОЙ БЛОК КОЛУМ***************************
+********************************************************/
+.columns {
+  padding-top: 50px;
+  padding-bottom: 90px; }
+
+.columns__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+
+.columns__flex-item {
+  max-width: 290px;
+  text-align: center; }
+
+.columns__flex-item img {
+  width: 50px;
+  height: 50px; }
+
+.smile {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  position: relative; }
+
+.smile::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 15px;
+  left: 7px;
+  text-align: center;
+  background: url("../img/vector/liz.png") 65% 45% no-repeat, url("../img/vector/smile.png") no-repeat, url("../img/vector/line.png") 66% 54% no-repeat; }
+
+.columns__flex-title {
+  padding: 10px 0 20px 0; }
+
+.price {
+  font-weight: 600; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ ВТОРОЙ БЛОК КОЛУМ***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 993px; } }
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 769px; } }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .container {
+    max-width: 481px; }
+  .columns {
+    padding-bottom: 10px; }
+  .columns__flex {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .columns__flex-item {
+    max-width: 142px; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .container {
+    max-width: 321px; }
+  .columns__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .columns__flex-item {
+    max-width: 142px;
+    padding-bottom: 20px; } }
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+  .container {
+    max-width: 280px; } }
+
+/************************************************************************************************************************************************************************************
+************ТРЕТИЙ БЛОК БАЙ***************************
+********************************************************/
+.buy {
+  padding-bottom: 100px; }
+
+.buy__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.buy__flex-item {
+  max-width: 457px; }
+
+.buy__flex-item img {
+  width: 110%;
+  height: 100%;
+  -webkit-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  transform: translateY(50px); }
+
+.buy__flex-title {
+  font-size: 51px; }
+
+.buy__flex-text {
+  max-width: 354px;
+  padding: 30px 0 40px 0; }
+
+.buy__flex-price {
+  position: relative; }
+
+.buy__flex-price::before {
+  content: "  ";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 14px;
+  top: -3px;
+  left: 74px;
+  background-color: #19160C; }
+
+.buy__flex-price::after {
+  content: "  ";
+  display: block;
+  position: absolute;
+  width: 91px;
+  height: 17px;
+  top: 0;
+  left: 74px;
+  background: url("../img/vector/star.png") 77% 100% no-repeat, url("../img/vector/star2.png") 55% 100% no-repeat, url("../img/vector/star2.png") 32% 100% no-repeat, url("../img/vector/star2.png") 9% 100% no-repeat, url("../img/vector/star_null.png") 100% 100% no-repeat; }
+
+.buy__flex-btn {
+  margin-top: 27px; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ ТРЕТИЙ БЛОК БАЙ***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .buy__flex-item img {
+    width: 100%;
+    -webkit-transform: translateX(-42px);
+    -ms-transform: translateX(-42px);
+    transform: translateX(-42px); } }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .buy__flex-item img {
+    width: 100%; }
+  .buy__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .buy__flex-title {
+    margin-top: 30px;
+    font-size: 34px; }
+  .buy__flex-item img {
+    width: 100%; } }
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+  .buy__flex-item img {
+    width: 100%; } }
+
+/************************************************************************************************************************************************************************************
+************ЧЕТВЕРТЫЙ БЛОК FAVORITE***************************
+********************************************************/
+.favorite {
+  padding-bottom: 100px; }
+
+.favorite__title {
+  padding-bottom: 100px; }
+
+.favorite__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.favorite__flex-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: rgba(246, 216, 118, 0.3);
+  border-radius: 260px;
+  text-align: center;
+  height: 382px;
+  width: 268px;
+  position: relative; }
+
+.favorite__flex-item {
+  background-color: #FFFAEE;
+  border-radius: 50%;
+  width: 100%;
+  height: 251px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0.9; }
+
+.favorite__flex_item-text {
+  margin: auto; }
+
+.favorite__flex-title {
+  font-weight: 600;
+  font-size: 21px; }
+
+.favorite__text {
+  padding: 9px 0 19px 0; }
+
+.price__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+a > .plus:hover {
+  -webkit-box-shadow: 1px 1px 5px #000;
+  box-shadow: 1px 1px 5px #000;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1); }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ 4 БЛОК FAVORITE***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .favorite__flex-menu {
+    width: 240px; } }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .favorite__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .favorite__flex-menu {
+    margin-bottom: 30px; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .buy__flex-title {
+    margin-top: 30px;
+    font-size: 34px; }
+  .buy__flex-item img {
+    width: 100%; } }
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+  .buy__flex-item img {
+    width: 100%; } }
+
+/************************************************************************************************************************************************************************************
+************ПЯТЫЙ БЛОК FEEDBACK***************************
+********************************************************/
+.feedback {
+  padding-bottom: 25px; }
+
+.feedback__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.feedback__flex-item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 58%;
+  flex: 0 0 58%; }
+
+.feedback__flex-text {
+  letter-spacing: 0px;
+  position: relative; }
+
+.feedback__image-top {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  float: left;
+  margin: -39px 3px 0 0;
+  opacity: 0.5; }
+
+.feedback__image-bot {
+  float: right;
+  margin: -17px 0px 0 0;
+  opacity: 0.5; }
+
+.first {
+  padding: 0 298px 0 0; }
+
+.feedback__flex-icon {
+  margin: 50px 0 0 0;
+  padding: 19px 0 0 102px;
+  position: relative; }
+
+.feedback__flex-icon:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 72px;
+  background: url("../img/face.png") no-repeat; }
+
+.feedback-icon-name {
+  font-weight: 500; }
+
+.feedback-icon-text {
+  font-size: 14px;
+  position: relative;
+  left: 22px;
+  top: 7px; }
+
+.feedback-icon-text:before {
+  content: " ";
+  position: absolute;
+  top: 8px;
+  left: -22px;
+  width: 14px;
+  height: 1px;
+  background: #000; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ 5 БЛОК FEEDBACK***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .feedback__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
+  .first {
+    padding: 0 0 0 0; }
+  .feedback__image-bot {
+    -webkit-transform: translateX(33px);
+    -ms-transform: translateX(33px);
+    transform: translateX(33px); }
+  .feedback__flex-image img {
+    margin-top: -145px; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .buy__flex-title {
+    margin-top: 30px;
+    font-size: 34px; }
+  .buy__flex-item img {
+    width: 100%; }
+  .feedback__image-top {
+    margin-right: -8px;
+    -webkit-transform: rotate(180deg) scale(0.7);
+    -ms-transform: rotate(180deg) scale(0.7);
+    transform: rotate(180deg) scale(0.7); }
+  .feedback__image-bot {
+    margin-right: -8px;
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7); } }
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+  .buy__flex-item img {
+    width: 100%; } }
+
+/************************************************************************************************************************************************************************************
+************ШЕСТОЙ БЛОК ФУТЕР***************************
+********************************************************/
+.footer {
+  background: url("../img/footer-wrapper.png") 100% 0/cover no-repeat;
+  overflow: hidden;
+  min-height: 427px; }
+
+.footer__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.footer__flex-logo {
+  position: relative;
+  max-width: 238px; }
+
+footer .header__flex-logo {
+  margin: 130px 0 0 0; }
+
+.footer__flex-text {
+  padding: 30px 0 30px 0;
+  font-size: 14px; }
+
+.footer__flex-icon img {
+  margin-right: 20px; }
+
+.footer__flex-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 70%;
+  flex: 0 0 70%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.footer__flex_list-block {
+  line-height: 2; }
+
+.footer__flex_list-block p {
+  font-weight: 600; }
+
+.footer__list-item a {
+  color: #000; }
+  .footer__list-item a:hover {
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    font-weight: 500; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ 6 БЛОК ФУТЕР***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .footer__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .footer__flex-logo {
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .footer__flex-text {
+    width: 180px; }
+  .footer__flex_list-block p {
+    font-size: 16px; }
+  .footer__list-item {
+    font-size: 15px; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .footer__flex_list-block p {
+    font-size: 14px; }
+  .footer__list-item {
+    font-size: 12px; } }
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+  /***FOOTER***/
+  .menu__footer {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 7px;
+    height: 18px;
+    cursor: pointer;
+    top: -21px;
+    right: -100px; }
+  .menu__footer span,
+  .menu__footer::before {
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background-color: #000;
+    display: block; }
+  .menu__footer::before {
+    content: " "; }
+  .menu__footer::before {
+    top: 4px;
+    left: 2px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .menu__footer span {
+    top: 4px;
+    left: 81%;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  .menu__footer.go span {
+    top: 29%;
+    -webkit-transform: rotate(45deg) translate(0px, -50%);
+    -ms-transform: rotate(45deg) translate(0px, -50%);
+    transform: rotate(45deg) translate(0px, -50%); }
+  .menu__footer.go::before {
+    top: 29%;
+    -webkit-transform: rotate(-45deg) translate(0px, -50%);
+    -ms-transform: rotate(-45deg) translate(0px, -50%);
+    transform: rotate(-45deg) translate(0px, -50%); }
+  .menu__footer1 {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 7px;
+    height: 18px;
+    cursor: pointer;
+    top: -21px;
+    right: -100px; }
+  .menu__footer1 span,
+  .menu__footer1::before {
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background-color: #000;
+    display: block; }
+  .menu__footer1::before {
+    content: " "; }
+  .menu__footer1::before {
+    top: 4px;
+    left: 2px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .menu__footer1 span {
+    top: 4px;
+    left: 81%;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  .menu__footer1.go span {
+    top: 29%;
+    -webkit-transform: rotate(45deg) translate(0px, -50%);
+    -ms-transform: rotate(45deg) translate(0px, -50%);
+    transform: rotate(45deg) translate(0px, -50%); }
+  .menu__footer1.go::before {
+    top: 29%;
+    -webkit-transform: rotate(-45deg) translate(0px, -50%);
+    -ms-transform: rotate(-45deg) translate(0px, -50%);
+    transform: rotate(-45deg) translate(0px, -50%); }
+  .menu__footer2 {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 7px;
+    height: 18px;
+    cursor: pointer;
+    top: -21px;
+    right: -100px; }
+  .menu__footer2 span,
+  .menu__footer2::before {
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background-color: #000;
+    display: block; }
+  .menu__footer2::before {
+    content: " "; }
+  .menu__footer2::before {
+    top: 4px;
+    left: 2px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .menu__footer2 span {
+    top: 4px;
+    left: 81%;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  .menu__footer2.go span {
+    top: 29%;
+    -webkit-transform: rotate(45deg) translate(0px, -50%);
+    -ms-transform: rotate(45deg) translate(0px, -50%);
+    transform: rotate(45deg) translate(0px, -50%); }
+  .menu__footer2.go::before {
+    top: 29%;
+    -webkit-transform: rotate(-45deg) translate(0px, -50%);
+    -ms-transform: rotate(-45deg) translate(0px, -50%);
+    transform: rotate(-45deg) translate(0px, -50%); }
+  .footer__flex-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .footer__flex-icon img {
+    margin-right: 5px; }
+  .footer_list {
+    display: none;
+    -webkit-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease; }
+  .footer_list1 {
+    display: none; }
+  .footer_list2 {
+    display: none; }
+  .go {
+    display: block; } }
