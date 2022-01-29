@@ -112,7 +112,7 @@ p {
   content: " ";
   position: absolute;
   top: 14px;
-  right: 8px;
+  right: 7px;
   width: 30px;
   height: 4px;
   color: #fff;
@@ -489,9 +489,9 @@ main {
     transform: scale(0.5);
     bottom: -65px;
     left: -70px;
-    bottom: 6px;
+    bottom: 28px;
     left: -186px;
-    z-index: 0; }
+    z-index: -1; }
   .header__flex_wrapper-item {
     max-width: 320px;
     z-index: 5; } }
@@ -840,8 +840,8 @@ a > .plus:hover {
 
 .feedback__flex-item {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 58%;
-  flex: 0 0 58%; }
+  -ms-flex: 0 0 55%;
+  flex: 0 0 55%; }
 
 .feedback__flex-text {
   letter-spacing: 0px;
@@ -861,7 +861,7 @@ a > .plus:hover {
   opacity: 0.5; }
 
 .first {
-  padding: 0 298px 0 0; }
+  padding: 0 15px 0 0; }
 
 .feedback__flex-icon {
   margin: 50px 0 0 0;
@@ -901,6 +901,10 @@ a > .plus:hover {
 /* Large desktops and laptops */
 /* Landscape tablets and medium desktops */
 /* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .first {
+    padding: 0 275px 0 0; } }
+
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
   .feedback__flex {
@@ -909,7 +913,7 @@ a > .plus:hover {
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse; }
   .first {
-    padding: 0 0 0 0; }
+    padding: 0 224px 0 0; }
   .feedback__image-bot {
     -webkit-transform: translateX(33px);
     -ms-transform: translateX(33px);
@@ -930,15 +934,24 @@ a > .plus:hover {
     -ms-transform: rotate(180deg) scale(0.7);
     transform: rotate(180deg) scale(0.7); }
   .feedback__image-bot {
-    margin-right: -8px;
+    margin-right: -21px;
     -webkit-transform: scale(0.7);
     -ms-transform: scale(0.7);
-    transform: scale(0.7); } }
+    transform: scale(0.7); }
+  .first {
+    padding: 0 81px 0 0; } }
 
 /* Iphone 5 */
 @media (max-width: 320px) {
   .buy__flex-item img {
-    width: 100%; } }
+    width: 100%; }
+  .feedback__image-bot {
+    margin-right: -40px;
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7); }
+  .first {
+    padding: 0 213px 0 0; } }
 
 /************************************************************************************************************************************************************************************
 ************ШЕСТОЙ БЛОК ФУТЕР***************************
