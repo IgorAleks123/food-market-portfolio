@@ -75,7 +75,7 @@
   -o-transition: left 0.3s ease 0s;
   transition: left 0.3s ease 0s;
   overflow: auto;
-  z-index: 4; }
+  z-index: 6; }
 
 .header__menu._active {
   left: 0; }
